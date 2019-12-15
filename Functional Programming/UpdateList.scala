@@ -1,1 +1,0 @@
-def absoluteValues(arr: List[Int]): List[Int] = arr.map(if (x >= 0) x else -x)
