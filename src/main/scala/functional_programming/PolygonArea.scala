@@ -1,6 +1,6 @@
-import scala.math._
+package functional_programming
 
-object Solution {  
+object PolygonArea {
   def area(coords: List[(Int, Int)]): Double = {    
     val first = coords(0)
     def helper(coords: List[(Int, Int)]): Double =
@@ -22,14 +22,12 @@ object Solution {
     }  
   
   def main(args: Array[String]) {
-    // val stdin = scala.io.StdIn
-    // val n = stdin.readInt()
-    val n = Console.readInt()
+    val stdin = scala.io.StdIn
+    val n = stdin.readInt()
 
     var buffer = new scala.collection.mutable.ListBuffer[Int]()
     for (i <- 1 to n) {
-      // var line = stdin.readLine()
-      var line = Console.readLine()
+       var line = stdin.readLine()
       line.split(" ").map(_.toInt).foreach { buffer += _ }
     }
     val coords = makeCoordPairs(buffer.toList)

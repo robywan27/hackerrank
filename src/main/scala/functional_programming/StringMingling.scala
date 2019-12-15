@@ -1,4 +1,6 @@
-object Solution {
+package functional_programming
+
+object StringMingling {
   def mingleStrings(s1: String, s2: String): String = {    
     def helper(l1: List[Char], l2: List[Char]): List[Char] =
       (l1, l2) match {
@@ -12,10 +14,8 @@ object Solution {
   }
 
   def main(args: Array[String]) {
-    /*val string1 = scala.io.StdIn.readLine()
-    val string2 = scala.io.StdIn.readLine()*/
-    val string1 = Console.readLine()
-    val string2 = Console.readLine()
+    val string1 = scala.io.StdIn.readLine()
+    val string2 = scala.io.StdIn.readLine()
     println(mingleStrings(string1, string2))
   }
 }

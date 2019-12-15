@@ -1,4 +1,6 @@
-object Solution {
+package functional_programming
+
+object Exponential {
   def exp(x: Double, precision: Int): Double = {
     def loop(x: Double, n: Int): Double = 
       if (n == 0)  1
@@ -9,16 +11,14 @@ object Solution {
 
   def fact(n: Int): Int = if (n == 0) 1 else n * fact(n - 1)
 
-  /*def main(args: Array[String]) {
-    // older versions of Scala do not recognize StdIn
-    // val stdin = scala.io.StdIn
-
-    val n = readLine.trim.toInt
+  def main(args: Array[String]) {
+    val stdin = scala.io.StdIn
+    val n = stdin.readLine.trim.toInt
 
     for (nItr <- 1 to n) {
-      val x = readLine.trim.toDouble
+      val x = stdin.readLine.trim.toDouble
       val e = exp(x, 10)
       println(f"$e%.4f")
     }
-  }*/
+  }
 }

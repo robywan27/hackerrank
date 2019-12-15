@@ -1,6 +1,6 @@
-// import java.io._
+ package interview_preparation_kit
 
-object Solution {    
+object CountingValleys {
   def countingValleys(n: Int, s: String): Int = {
     var altitudeLevel = 0
     var valleys = 0
@@ -15,16 +15,11 @@ object Solution {
   }
 
   def main(args: Array[String]) {
-    // val stdin = scala.io.StdIn
-    val stdin = Console
-    // val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
+    val stdin = scala.io.StdIn
     val n = stdin.readLine.trim.toInt
     val s = stdin.readLine
 
     val result = countingValleys(n, s)
-
-    // printWriter.println(result)
     println(result)
-    // printWriter.close()
   }
 }

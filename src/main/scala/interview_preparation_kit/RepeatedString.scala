@@ -1,6 +1,6 @@
-import java.io._
+package interview_preparation_kit
 
-object Solution {    
+object RepeatedString {
   def repeatedString(s: String, n: Long): Long = {    
     var numberOfAs: Long = 0    
     val patternLength = s.length
@@ -18,16 +18,11 @@ object Solution {
 
 
   def main(args: Array[String]) {
-    // val stdin = scala.io.StdIn
-    val stdin = Console
-    // val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
+    val stdin = scala.io.StdIn
     val s = stdin.readLine
     val n = stdin.readLine.trim.toLong
 
     val result = repeatedString(s, n)
-
-    // printWriter.println(result)
     println(result)
-    // printWriter.close()
   }
 }

@@ -1,6 +1,8 @@
+package functional_programming
+
 import scala.math._
 
-object Solution {  
+object PolygonPerimeter {
   def segments(coords: List[(Int, Int)]): List[Double] = {
     def segment(c1: (Int, Int), c2: (Int, Int)): Double = {
       def sqr(n: Int): Int = n * n
@@ -26,14 +28,12 @@ object Solution {
     }  
   
   def main(args: Array[String]) {
-    // val stdin = scala.io.StdIn
-    // val n = stdin.readInt()
-    val n = Console.readInt()
+    val stdin = scala.io.StdIn
+    val n = stdin.readInt()
 
     var buffer = new scala.collection.mutable.ListBuffer[Int]()
     for (i <- 1 to n) {
-      // var line = stdin.readLine()
-      var line = Console.readLine()
+       var line = stdin.readLine()
       line.split(" ").map(_.toInt).foreach { buffer += _ }
     }
     val coords = makeCoordPairs(buffer.toList)
